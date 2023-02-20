@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import AppBar from './components/AppBar';
+import BasicDetails from './components/BasicDetails';
+import Calculator from './components/Calculator';
+import Result from './components/Result';
+import { useState } from 'react';
 
 function App() {
+  const [pricePerKg, setPricePerKg] = useState("")
+  const [optionSelected, setOptionSelected] = useState("Price")
+  const [valueToCalculate, setValueToCalculate] = useState("")
+  const [result, setResult] = useState("")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppBar />
+      <BasicDetails
+        pricePerKg={pricePerKg}
+        setPricePerKg={setPricePerKg}
+      />
+      <Calculator
+        pricePerKg={pricePerKg}
+        optionSelected={optionSelected}
+        setOptionSelected={setOptionSelected}
+        valueToCalculate={valueToCalculate}
+        setValueToCalculate={setValueToCalculate}
+        result={result}
+        setResult={setResult}
+      />
+      <Result
+        result={result}
+      />
     </div>
   );
 }
