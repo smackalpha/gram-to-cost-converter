@@ -2,6 +2,7 @@
   "name": "gram-to-cost-converter",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://smackalpha.github.io/gram-to-cost-converter",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
