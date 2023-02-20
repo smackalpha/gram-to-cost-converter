@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.8c82deed.js",
-    "static/js/787.8f26295c.chunk.js": "/static/js/787.8f26295c.chunk.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.8c82deed.js.map": "/static/js/main.8c82deed.js.map",
-    "787.8f26295c.chunk.js.map": "/static/js/787.8f26295c.chunk.js.map"
+    "main.css": "/gram-to-cost-converter/static/css/main.e6c13ad2.css",
+    "main.js": "/gram-to-cost-converter/static/js/main.cae05ca2.js",
+    "static/js/787.8f26295c.chunk.js": "/gram-to-cost-converter/static/js/787.8f26295c.chunk.js",
+    "index.html": "/gram-to-cost-converter/index.html",
+    "main.e6c13ad2.css.map": "/gram-to-cost-converter/static/css/main.e6c13ad2.css.map",
+    "main.cae05ca2.js.map": "/gram-to-cost-converter/static/js/main.cae05ca2.js.map",
+    "787.8f26295c.chunk.js.map": "/gram-to-cost-converter/static/js/787.8f26295c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.8c82deed.js"
+    "static/js/main.cae05ca2.js"
   ]
 }
