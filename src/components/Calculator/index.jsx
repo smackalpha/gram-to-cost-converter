@@ -47,7 +47,7 @@ function Calculator(props) {
 
       <Styled.ChooserBlock>
         <div>Choose One to Calculate</div>
-        <select style={{ height: "35px", fontSize: "18px" }} value={optionSelected} onChange={(e) => { onOptionChange(e.target.value); }}>
+        <select style={{ height: "40px", fontSize: "18px" }} value={optionSelected} onChange={(e) => { onOptionChange(e.target.value); }}>
           <option value="Price">Price</option>
           <option value="Grams">Grams</option>
           <option value="KiloGrams">KiloGrams</option>
