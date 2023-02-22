@@ -1,5 +1,7 @@
 import React from 'react'
 import * as Styled from './styles';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Calculator(props) {
   const { pricePerKg, optionSelected, setOptionSelected, valueToCalculate, setValueToCalculate, result, setResult } = props
@@ -12,7 +14,7 @@ function Calculator(props) {
 
   const onCalculateBtnClick = () => {
     if (pricePerKg === "") {
-      alert("Please Enter the Price of 1KG")
+      toast.warn("Please Enter the Price of 1KG")
       return
     }
     if (optionSelected === "Price") {
@@ -20,6 +22,10 @@ function Calculator(props) {
       const price = valueToCalculate;
       const costPerGram = pricePerKg / conversionRate;
       const amountInGrams = price / costPerGram;
+      if(amountInGrams>1000){
+        setResult(Math.round(amountInGrams) + " grams ≈ "+ (amountInGrams/1000)+ " Kgs")
+        return
+      }
       setResult(Math.round(amountInGrams) + " grams")
     }
     if (optionSelected === "Grams") {
@@ -28,12 +34,10 @@ function Calculator(props) {
       const amountInKg = amountInGrams / conversionRate;
       const costForAmount = amountInKg * pricePerKg;
       setResult("Price : "+Math.round(costForAmount))
-      // console.log(costForAmount); // output: 60
     }
     if (optionSelected === "KiloGrams") {
       const costForAmount = valueToCalculate * pricePerKg;
       setResult("Price : "+Math.round(costForAmount))
-      // console.log(costForAmount); // output: 60
     }
   }
   return (
@@ -56,7 +60,7 @@ function Calculator(props) {
       </Styled.ChooserBlock>
       <Styled.Button onClick={onCalculateBtnClick}>Calculate</Styled.Button>
 
-
+      <ToastContainer position="bottom-center" />
     </Styled.MainContainer>
   )
 }

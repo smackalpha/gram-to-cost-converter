@@ -11,7 +11,7 @@ function App() {
   const [result, setResult] = useState("")
 
   return (
-    <div>
+    <div style={{backgroundColor:"#fadfe3", height:"100vh"}}>
       <AppBar />
       <BasicDetails
         pricePerKg={pricePerKg}
