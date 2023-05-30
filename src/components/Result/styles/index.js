@@ -7,19 +7,19 @@ export const MainContainer = styled.div`
 `;
 
 export const ResultBlock = styled.div`
-  display: flex; 
-  height: 250px; 
-  width: 250px; 
-  background-color: #A459D1; 
-  margin: 0px 60px; 
-  border-radius: 500px; 
+   display: flex; 
+  height: 100px; 
+  width: 100%; 
+  border: 2px solid #F16767; 
+  margin: 0px 10px; 
+  border-radius: 20px; 
   justify-content: center; 
   align-items: center;
+  background-color: transparent; //Or you can use any color you want
 `;
 
 export const Text = styled.div`
-  color: white; 
+  color: black; 
   font-size: 24px; 
-  font-weight: 600;
   text-align: center;
 `;

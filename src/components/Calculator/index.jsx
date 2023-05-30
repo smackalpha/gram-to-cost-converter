@@ -23,7 +23,7 @@ function Calculator(props) {
       const costPerGram = pricePerKg / conversionRate;
       const amountInGrams = price / costPerGram;
       if(amountInGrams>1000){
-        setResult(Math.round(amountInGrams) + " grams ≈ "+ (amountInGrams/1000)+ " Kgs")
+        setResult(Math.round(amountInGrams) + " grams ≈ "+ (amountInGrams/1000).toFixed(2)+ " Kgs")
         return
       }
       setResult(Math.round(amountInGrams) + " grams")
@@ -33,12 +33,16 @@ function Calculator(props) {
       const amountInGrams = valueToCalculate;
       const amountInKg = amountInGrams / conversionRate;
       const costForAmount = amountInKg * pricePerKg;
-      setResult("Price : "+Math.round(costForAmount))
+      setResult(Math.round(costForAmount))
     }
     if (optionSelected === "KiloGrams") {
       const costForAmount = valueToCalculate * pricePerKg;
-      setResult("Price : "+Math.round(costForAmount))
+      setResult(Math.round(costForAmount))
     }
+  }
+  const onValueChange = (e) =>{
+    setValueToCalculate(e.target.value)
+    setResult("")
   }
   return (
     <Styled.MainContainer>
@@ -56,7 +60,7 @@ function Calculator(props) {
 
       <Styled.ChooserBlock>
         <div>Enter {optionSelected}</div>
-        <Styled.Input type="number" value={valueToCalculate} placeholder={`Enter ${optionSelected}`} onChange={(e) => setValueToCalculate(e.target.value)} />
+        <Styled.Input type="number" value={valueToCalculate} placeholder={`Enter ${optionSelected}`} onChange={(e) => onValueChange(e)} />
       </Styled.ChooserBlock>
       <Styled.Button onClick={onCalculateBtnClick}>Calculate</Styled.Button>
 

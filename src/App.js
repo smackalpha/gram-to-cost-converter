@@ -28,6 +28,8 @@ function App() {
       />
       <Result
         result={result}
+        optionSelected={optionSelected}
+        valueToCalculate={valueToCalculate}
       />
     </div>
   );
